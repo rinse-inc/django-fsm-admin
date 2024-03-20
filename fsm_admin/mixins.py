@@ -5,12 +5,8 @@ from collections import defaultdict
 import django
 from django.conf import settings
 from django.contrib import messages
-if django.VERSION < (4, 0):
-    from django.utils.encoding import force_text as force_str
-    from django.utils.translation import ugettext_lazy as _
-else:
-    from django.utils.encoding import force_str
-    from django.utils.translation import gettext_lazy as _
+from django.utils.encoding import force_str
+from django.utils.translation import gettext_lazy as _
 from django.contrib.admin.templatetags.admin_urls import add_preserved_filters
 from django.http import HttpResponseRedirect
 
